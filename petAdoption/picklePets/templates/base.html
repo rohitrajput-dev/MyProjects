@@ -1,0 +1,50 @@
+<html lang="en-US">
+    <head>
+        {% load static %}
+        <meta charset="UTF-8">
+        <title>Home - Pickle Pet Medicine</title>
+        <link rel="stylesheet" id="ample-style-css" href="{% static 'css/base_style.css' %}" type="text/css" media="all">
+        <link rel="stylesheet" href="{% static 'css/toggler.css' %}" type="text/css" >
+    </head>
+    <body class="wide">
+        <div id="page" class="hfeed site">
+            <header>
+                <div class="header">
+                    <div class="main-head-wrap inner-wrap clearfix">
+                        <div id="header-logo-image">
+                            <a href="/pets">
+                                <img src="{% static 'images/pet-logo-single.png' %}" alt="Pickle Pet Medicine">
+                            </a>
+                        </div>
+                        <div id="header-text" class="">
+                            <h1 id="site-title">
+                                <a href="/" title="Pickle Pet Medicine" rel="home">Pickle Pet Medicine</a>
+                            </h1>
+                            <p>We treat your pets like we treat our own.</p>
+                        </div>
+                    </div>
+                    <img src="{% static 'images/image2jpg.jpg' %}" alt="Pickle Pet Medicine">
+                </div>
+            </header>
+            <div class="main-wrapper">
+                <div class="single-page clearfix">
+                    <div class="inner-wrap">
+                        <p>Pickle Pet Medicine strives to blend the best in traditional and alternative medicine in the diagnosis and treatment of health conditions in companion animals, including dogs, cats, birds, reptiles, rodents, and fish. We apply the latest healthcare technology, along with the Pickle garnered in the centuries old tradition of veterinary medicine, to find the safest and most effective treatments and cures, while maintaining a caring relationship with our patients and their guardians.</p>
+                        <hr>
+                        <div>
+                            {% block content %}
+                            {% endblock %}
+                        <!-- Insert content here-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer id="colophon">
+                <div class="inner-wrap">
+                    Pickle Pet Medicine is a fictitious brand created by Deadpool, solely for the purpose of training. All products and people associated with Pickle Pet Medicine are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Please see your veterinarian for all matters related to your pet's health.
+                </div>
+            </footer>
+        </div>
+        <script src="{%static 'js/main.js' %}"></script>
+    </body>
+</html>
